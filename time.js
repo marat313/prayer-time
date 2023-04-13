@@ -14,7 +14,6 @@ const date_1 = document.querySelector(".date_1");
 const date_2 = document.querySelector(".date_2");
 const date_3 = document.querySelector(".date_3");
 
-const date_hijri = document.querySelector(".hij");
 const hijri_1 = document.querySelector(".hij_1");
 const hijri_2 = document.querySelector(".hij_2");
 const hijri_3 = document.querySelector(".hij_3");
@@ -23,15 +22,12 @@ const weather_city = document.querySelector(".weather_city");
 const weather_temp = document.querySelector(".weather_temp");
 const weather_condition = document.querySelector(".weather_condition");
 const local_time = document.querySelector(".local_time");
-const weather_icon = document.querySelector(".weather_icon");
+
 
 let namaz = (e) => {
     e.preventDefault();
     
     let cityValue = document.getElementById("city").value;
-
-
-
     let date = new Date(2022, 4, 25, 13, 30);
 
     //! LOCAL STORAGE OF PRAY TIMES
@@ -54,9 +50,11 @@ let namaz = (e) => {
     hijri_2.append(JSON.parse(localStorage.getItem("hijri_day")))
     hijri_3.append(JSON.parse(localStorage.getItem("hijri_week")))
 
-    if (cityValue === "") {
+    if (city.value === "") {
         console.log("ВВЕДИТЕ ГОРОД");
-
+        sendBtn.removeEventListener("click", namaz)
+        return false
+        
     } else {
         let url = `https://api.aladhan.com/v1/timingsByCity/${date.getDate}-${date.getMonth}-${date.getFullYear}?city=${cityValue}&country=&method=3`;
         city.value = "";
@@ -156,8 +154,7 @@ let namaz = (e) => {
         local_time.append(JSON.parse(localStorage.getItem("local_time")))
         weather_temp.append(JSON.parse(localStorage.getItem("temp")))
         weather_condition.append(JSON.parse(localStorage.getItem("condition")))
-        
-        
+
         
         let weather_url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${cityValue}`
     
