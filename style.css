@@ -53,17 +53,24 @@
     .form>.send {
         margin: 20px;
         border-radius: 20px;
-        outline: #142e48;
         border: none;
         min-width: 100px;
         height: 45px;
         font-size: 17px;
         cursor: pointer;
+        box-shadow: 0.1em 0.1em;
+        border: 1px solid #020b1e;
     }
 
     .form>.send:hover {
-        background-color: rgb(27, 167, 167);
-        color: aliceblue;
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+    }
+
+    .form > .send:active{
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+        color: #3db917;
     }
 
     .form>label {

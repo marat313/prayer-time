@@ -52,9 +52,7 @@ let namaz = (e) => {
 
     if (city.value === "") {
         console.log("ВВЕДИТЕ ГОРОД");
-        sendBtn.removeEventListener("click", namaz)
         return false
-        
     } else {
         let url = `https://api.aladhan.com/v1/timingsByCity/${date.getDate}-${date.getMonth}-${date.getFullYear}?city=${cityValue}&country=&method=3`;
         city.value = "";
@@ -150,7 +148,7 @@ let namaz = (e) => {
 
 
         //! WEATHER LOCAL STORAGE
-        weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
+        // weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
         local_time.append(JSON.parse(localStorage.getItem("local_time")))
         weather_temp.append(JSON.parse(localStorage.getItem("temp")))
         weather_condition.append(JSON.parse(localStorage.getItem("condition")))
@@ -158,7 +156,7 @@ let namaz = (e) => {
         
         let weather_url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${cityValue}`
     
-        weather_city.innerHTML = ""
+        weather_city.innerHTML = ''
         local_time.innerHTML = "";
         weather_temp.innerHTML = "";
         weather_condition.innerHTML = "";
@@ -167,7 +165,7 @@ let namaz = (e) => {
 
         .then((response) => response.json())
         .then((current) => {
-
+ 
             weather_city.append(current.location.name);
             local_time.append(current.location.localtime);
             weather_temp.append(current.current.temp_c + String.fromCodePoint(8451));
