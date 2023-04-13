@@ -62,16 +62,19 @@
         cursor: pointer;
         box-shadow: 0.1em 0.1em;
         border: 1px solid #020b1e;
+        box-shadow: #062341;
     }
 
     .form>.send:hover {
         transform: translate(-0.05em, -0.05em);
         box-shadow: 0.15em 0.15em;
+        box-shadow: #062341;
     }
 
     .form > .send:active{
         transform: translate(0.05em, 0.05em);
         box-shadow: 0.05em 0.05em;
+        box-shadow: #062341;
         color: #3db917;
     }
 

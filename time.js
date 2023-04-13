@@ -148,11 +148,10 @@ let namaz = (e) => {
 
 
         //! WEATHER LOCAL STORAGE
-        // weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
-        local_time.append(JSON.parse(localStorage.getItem("local_time")))
+        weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
         weather_temp.append(JSON.parse(localStorage.getItem("temp")))
         weather_condition.append(JSON.parse(localStorage.getItem("condition")))
-
+        console.log(localStorage.getItem("weather_city"));
         
         let weather_url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${cityValue}`
     
