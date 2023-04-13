@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Prayer time</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Время намаза</h1>
+
+        <form class="form">
+            <br />
+            <input id="city" class="city" placeholder="Введите город" required type="text" />
+            <input id="send" class="send" type="submit" value="Узнать" />
+        </form>
+
+        <section class="date">
+            <div class="date_grigorian ">
+                <span class="date_1 gr_date"></span>
+                <span class="date_2 gr_date"></span>
+                <span class="date_3 gr_date"></span>
+            </div>
+            <div class="date_hijri">
+                <span class="hij_1 gr_date"></span>
+                <span class="hij_2 gr_date"></span>
+                <span class="hij_3 gr_date"></span>
+            </div>
+        </section>
+
+        <section class="weather">
+            <div class="star_light">
+                <div class="star"></div>
+                <div class="star a"></div>
+                <div class="star b"></div>
+                <div class="star c"></div>
+                <div class="star d"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star1"></div>
+            <div class="shooting_star2"></div>
+            
+            <span class="weather_city"></span>
+            <span class="weather_temp"></span>
+            <span class="local_time"></span>
+            <span class="weather_condition"></span>
+        </section>
+
+        <section id="namaz_time">
+            <h4>Фаджр <br /><span class="fajr"></span></h4>
+            <h4>Восход <br /><span class="voshod"></span></h4>
+            <h4>Зухр <br /><span class="zuhr"></span></h4>
+            <h4>Аср <br /><span class="asr"></span></h4>
+            <h4>Магриб <br /><span class="magrib"></span></h4>
+            <h4>Закат <br /><span class="zakat"></span></h4>
+            <h4>Иша <br /><span class="isha"></span></h4>
+        </section>
+    </div>
+
+    <script src="./time.js"></script>
+    <script src="./coordinate.js"></script>
+</body>
+
+</html>

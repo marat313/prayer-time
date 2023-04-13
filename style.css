@@ -1,0 +1,357 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+
+
+    body {
+        background-color: #142e48;
+        text-align: center;
+        font-family: 'Secular One', sans-serif;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 440px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .title {
+        margin-top: 20px;
+        margin-bottom: -10px;
+    }
+
+/* ================ FORM ================== */
+
+    .form > input {
+        border: none;
+        outline: #142e48;
+        background-color: #464677dd;
+        font-size: 18px;
+        min-width: 320px;
+        height: 45px;
+        border-radius: 20px;
+    }
+
+    .form>.city {
+        margin-left: 10px;
+    }
+
+    .form>.country {
+        margin-left: 10px;
+    }
+
+    .form>input[placeholder] {
+        padding-left: 15px;
+    }
+
+    .form>.send {
+        margin: 20px;
+        border-radius: 20px;
+        outline: #142e48;
+        border: none;
+        min-width: 100px;
+        height: 45px;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .form>.send:hover {
+        background-color: rgb(27, 167, 167);
+        color: aliceblue;
+    }
+
+    .form>label {
+        font-size: 25px;
+    }
+
+
+/* ==================== DATE ======================= */
+
+    .date {
+        text-align: center;
+        width: 100%;
+    }
+
+    .date > div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .date>div>h4 {
+        padding-left: 8px;
+    }
+
+    .date .date_grigorian>span {
+        width: 120px;
+        height: 45px;
+        border: none;
+        border-radius: 15px;
+        background-color: #464677dd;
+        margin: 0px 15px;
+        font-family: 'Secular One', sans-serif;
+
+    }
+
+    .gr_date {
+        animation-name: dateAnime;
+        animation-duration: 0.3s;
+        transform: scaleX(1);
+        outline: none;
+        border: none;
+        padding-top: 10px;
+    }
+
+    @keyframes dateAnime {
+        from {
+            transform: scaleX(8)
+        }
+
+        to {
+            transform: scaleX(1)
+        }
+    }
+
+    .date .date_hijri>span {
+        width: 120px;
+        height: 45px;
+        border: none;
+        border-radius: 15px;
+        background-color: #464677dd;
+        margin: 12px 10px 0px 10px;
+        font-family: 'Secular One', sans-serif;
+        padding-top: 10px;
+    }
+
+    /* ======================== WEATHER ======================= */
+
+
+    .weather {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        align-items: center;
+        background-color: #0c253f;
+        border-radius: 20px;
+        height: 120px;
+        position: relative;
+        font-family: 'Secular One', sans-serif;
+    }
+
+    .local_time,
+    .weather_city,
+    .weather_temp,
+    .weather_condition {
+        position: absolute;
+        border: none;
+    }
+
+    .weather_city {
+        top: 5%;
+        left: 5%;
+        color: #b2cac2;
+        font-size: 30px;
+    }
+    .weather_temp{
+        top: 5%;
+        right: 5%;
+        color: #b2cac2;
+        font-size: 30px;
+    }
+
+    .local_time{
+        position: absolute;
+        top: 38%;
+        left: 5%;
+        font-size: 13px;
+        color: #019517d4;
+    }
+    .weather_condition{
+        top: 70%;
+        left: 5%;
+        color: #b2cac2;
+        font-size: 15px;
+    }
+
+/* ================ STAR LIGHT ANIMATION ================== */
+
+
+
+    .star {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        animation-name: fader;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    .star::before {
+        content: '';
+        width:2px;
+        height:2px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        left:60px;
+        top:0px;
+        animation-name: blinker;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    .star::after {
+        content: '';
+        width:2px;
+        height:2px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        left:-100px;
+        top:-5px;
+        animation-name: blinker;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;	
+    }
+    .star.a {
+        top:90px;
+        left:60%;
+    }
+    .star.b {
+        top:65px;
+        left:80%;
+    }
+    .star.c {
+        top:50px;
+        left:53%;
+    }
+    .star.d {
+        top:35px;
+        left:25%;
+    }
+
+    .shooting_star {
+        position: absolute;
+        top: 5%;
+        height: 0.10em;
+        width: 1.5em;
+        background-color: #ffffff;
+        transform: rotate(-30deg);
+        right: 1.62em;
+        opacity: 0.2;
+        animation: shooting-str 3s infinite;
+      }
+      .shooting_star2 {
+        position: absolute;
+        height: 0.13em;
+        width: 1.5em;
+        background-color: #ffffff;
+        transform: rotate(-30deg);
+        right: 10.62em;
+        top: 6%;
+        opacity: 0.2;
+        animation: shooting-str 4s infinite;
+      }
+      .shooting_star1 {
+        position: absolute;
+        height: 0.11em;
+        width: 1.5em;
+        background-color: #ffffff;
+        transform: rotate(-30deg);
+        right: 1em;
+        top: 8%;
+        opacity: 0.2;
+        animation: shooting-str 5s infinite;
+      }
+
+
+      @keyframes shooting-str {
+        10% {
+          transform: rotate(-30deg) translate(-30em, 0.1s);
+          opacity: 0.2;
+        }
+        100% {
+          transform: rotate(-30deg) translate(-14em, 0);
+          opacity: 0;
+        }
+      }
+
+
+    @keyframes fader {
+        0% { opacity: 0; }
+        15% { opacity: 0; }
+        40% { opacity: 1; }
+        60% { opacity: 0.4; }
+        70% { opacity: 1; }
+        80% {  opacity: 0; }
+        100% { opacity: 0; }
+    } 
+
+    @keyframes blinker {
+        0% { opacity: 0; }
+        18% { opacity: 0; }
+        25% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        70% {  opacity: 0; }
+        100% { opacity: 0; }	
+    }
+
+/* ================ MOON ANIMATION ================== */
+      .moon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: inset 1em -1em ghostwhite;
+        position: absolute;
+        top: 31%;
+        right: 19%;
+        animation: moon 40s ease infinite;
+      }
+
+      @keyframes moon {
+        0% {transform: translateX(8vw);
+            opacity: 0.5;}
+        20% {transform: translateX(-40vw);}
+        70% {transform: translateX(15);}
+      }
+
+/* ================ NAMAZ TIME ======================= */
+
+    #namaz_time{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 13px;
+        margin-top: 1rem;
+        margin-bottom: 20px;
+        padding: 0 1rem 0 1rem;
+     }
+     #namaz_time > h4{
+        border: none;
+        background-color: #464677dd;
+        color: #3db917;
+        border-radius: 40px;
+        padding: 10px 10px 10px 10px;
+        font-size: 16px;
+        width: 100px;
+        line-height: 1.2;
+        text-align: center;
+     }
+     #namaz_time > h4 > span{
+        color: #c9d3dc;
+     }
+     #namaz_time > h4:hover{
+        transform: scale(1.1);
+        background-color: rgb(27, 167, 167);
+        cursor: pointer;
+        color: #142e48;
+     }
+
