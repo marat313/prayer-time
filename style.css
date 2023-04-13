@@ -8,7 +8,8 @@
 
 
     body {
-        background-color: #142e48;
+        background-color: #062341;
+        /* background-color: #142e48; */
         text-align: center;
         font-family: 'Secular One', sans-serif;
         margin: 0 auto;
@@ -57,6 +58,7 @@
         min-width: 100px;
         height: 45px;
         font-size: 17px;
+        font-weight: 600;
         cursor: pointer;
         box-shadow: 0.1em 0.1em;
         border: 1px solid #020b1e;
@@ -143,7 +145,7 @@
         justify-content: center;
         margin-top: 25px;
         align-items: center;
-        background-color: #0c253f;
+        background-color: #0a1b2d;
         border-radius: 20px;
         height: 120px;
         position: relative;
@@ -316,7 +318,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        box-shadow: inset 1em -1em ghostwhite;
+        box-shadow: inset 1em -1em #e1e1ea;
         position: absolute;
         top: 31%;
         right: 19%;
@@ -343,8 +345,8 @@
      }
      #namaz_time > h4{
         border: none;
-        background-color: #464677dd;
-        color: #3db917;
+        background-color: #152953;
+        color: #4ea04f;
         border-radius: 40px;
         padding: 10px 10px 10px 10px;
         font-size: 16px;
