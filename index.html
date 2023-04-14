@@ -18,9 +18,16 @@
 
         <form class="form">
             <br />
-            <input id="city" class="city" placeholder="Введите город" required type="text" />
+            <input id="city" class="city" list="citys" placeholder="Введите город" required type="text" />
             <input id="send" class="send" type="submit" value="Узнать" />
         </form>
+        <datalist id="citys">
+            <option value="Бишкек"></option>
+            <option value="Баткен"></option>
+            <option value="Нарын"></option>
+            <option value="Талас"></option>
+            <option value="Ыссык-кол"></option>
+        </datalist>
 
         <section class="date">
             <div class="date_grigorian ">
