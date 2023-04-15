@@ -8,8 +8,9 @@
 
 
     body {
-        background-color: #062341;
-        /* background-color: #142e48; */
+        background-color: #3a5278;
+        /* background-color: #dbcccc; */ /* day light */
+        /* background-color: #062341; */ /* dark light */
         text-align: center;
         font-family: 'Secular One', sans-serif;
         margin: 0 auto;
@@ -31,13 +32,23 @@
 
     .form > input {
         border: none;
-        outline: #142e48;
-        background-color: #464677dd;
+        /* outline: #142e48; */
+        /* background-color: #084247dd; */
+        /* background-color: #464677dd; */
         font-size: 18px;
         min-width: 320px;
         height: 45px;
         border-radius: 20px;
-        color: #b2cac2;
+        color: #000000;
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+            inset -5px -5px 10px #4b6b9c;
+    }
+    .form >input:focus{
+        outline: none;
+    }
+    .form > input:active{
+        outline: none;
     }
 
     .form>.city {
@@ -50,6 +61,7 @@
 
     .form>input[placeholder] {
         padding-left: 15px;
+         color: #000000;
     }
 
     .form>.send {
@@ -61,14 +73,26 @@
         font-size: 17px;
         font-weight: 600;
         cursor: pointer;
+        background: linear-gradient(145deg, #344a6c, #3e5880);
+        box-shadow:  5px 5px 10px #293954,
+                     -5px -5px 10px #4b6b9c;
+    }
+    .form > .send:active{
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+            inset -5px -5px 10px #4b6b9c;
+        transition: all 1.5s;
+        -webkit-transition: all 1.5s;
+        outline: none;
+        border: none;
     }
 
     .form>.send:hover {
         transform: translate(-0.05em, -0.05em);
-        box-shadow: #062341;
+
     }
 
-    .form>label {
+    .form > label {
         font-size: 25px;
     }
 
@@ -94,9 +118,11 @@
         height: 45px;
         border: none;
         border-radius: 15px;
-        background-color: #464677dd;
-        margin: 0px 15px;
+        margin: 12px 10px 0px 10px;
         font-family: 'Secular One', sans-serif;
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+                    inset -5px -5px 10px #4b6b9c;
 
     }
 
@@ -107,6 +133,7 @@
         outline: none;
         border: none;
         padding-top: 10px;
+
     }
 
     @keyframes dateAnime {
@@ -124,10 +151,12 @@
         height: 45px;
         border: none;
         border-radius: 15px;
-        background-color: #464677dd;
         margin: 12px 10px 0px 10px;
         font-family: 'Secular One', sans-serif;
         padding-top: 10px;
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+                    inset -5px -5px 10px #4b6b9c;
     }
 
     /* ======================== WEATHER ======================= */
@@ -138,11 +167,15 @@
         justify-content: center;
         margin-top: 25px;
         align-items: center;
-        background-color: #0a1b2d;
+        /* background-color: #0a1b2d; */
+        /* background-color: #33b1d4; */
         border-radius: 20px;
         height: 120px;
         position: relative;
         font-family: 'Secular One', sans-serif;
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+                    inset -5px -5px 10px #4b6b9c;
     }
 
     .local_time,
@@ -156,13 +189,13 @@
     .weather_city {
         top: 5%;
         left: 5%;
-        color: #b2cac2;
+        color: #121312;
         font-size: 30px;
     }
     .weather_temp{
         top: 5%;
         right: 5%;
-        color: #b2cac2;
+        color: #121312;
         font-size: 30px;
     }
 
@@ -171,12 +204,12 @@
         top: 38%;
         left: 5%;
         font-size: 13px;
-        color: #019517d4;
+        color: #121312;
     }
     .weather_condition{
         top: 70%;
         left: 5%;
-        color: #b2cac2;
+        color: #121312;
         font-size: 15px;
     }
 
@@ -325,7 +358,41 @@
         70% {transform: translateX(15);}
       }
 
+/* ================ SUN ANIMATION ======================= */
+
+
+.sun {
+    background: white;
+    border-radius: 50%;
+    width: 10vmin;
+    height: 10vmin;
+    position: absolute;
+    right: 21em;
+    top: 45%;
+    transform: rotate(-25deg);
+    animation: rise 40s infinite;
+    box-shadow: 0 0 10px white;
+  }
+
+  @keyframes rise {
+    10% {
+        transform: rotate(-30deg) translate(40em, 0.1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: rotate(25deg) translate(26em, 0);
+        opacity: 0.9;
+        top: -30%;
+      }
+      100% {
+        transform: rotate(-25deg) translate(-26em 0);
+        opacity: 0.9;
+      }
+  }
+
+
 /* ================ NAMAZ TIME ======================= */
+
 
     #namaz_time{
         display: flex;
@@ -335,25 +402,28 @@
         margin-top: 1rem;
         margin-bottom: 20px;
         padding: 0 1rem 0 1rem;
+        color: #121312;
      }
      #namaz_time > h4{
         border: none;
-        background-color: #152953;
-        color: #4ea04f;
+        /* background-color: #089fa1; */
+        /* background-color: #152953; */
+        /* color: #4ea04f; */
         border-radius: 40px;
         padding: 10px 10px 10px 10px;
         font-size: 16px;
         width: 100px;
         line-height: 1.2;
         text-align: center;
+        background: #3a5278;
+        box-shadow: inset 5px 5px 10px #293954,
+                    inset -5px -5px 10px #4b6b9c;
      }
      #namaz_time > h4 > span{
-        color: #c9d3dc;
+        color: #03b7b7;
      }
      #namaz_time > h4:hover{
         transform: scale(1.1);
-        background-color: rgb(27, 167, 167);
         cursor: pointer;
-        color: #142e48;
      }
 

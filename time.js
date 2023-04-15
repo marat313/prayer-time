@@ -22,6 +22,8 @@ const weather_city = document.querySelector(".weather_city");
 const weather_temp = document.querySelector(".weather_temp");
 const weather_condition = document.querySelector(".weather_condition");
 const local_time = document.querySelector(".local_time");
+const weather = document.querySelector(".weather");
+const moon = document.querySelector(".moon");
 
 
 let namaz = (e) => {
@@ -29,6 +31,10 @@ let namaz = (e) => {
     
     let cityValue = document.getElementById("city").value;
     let date = new Date(2022, 4, 25, 13, 30);
+
+
+
+
 
     //! LOCAL STORAGE OF PRAY TIMES
     fajr_time.append( JSON.parse(localStorage.getItem("fajr")))
@@ -49,6 +55,9 @@ let namaz = (e) => {
     hijri_2.append(JSON.parse(localStorage.getItem("hijri_month")))
     hijri_2.append(JSON.parse(localStorage.getItem("hijri_day")))
     hijri_3.append(JSON.parse(localStorage.getItem("hijri_week")))
+
+
+
 
     if (city.value === "") {
         console.log("ВВЕДИТЕ ГОРОД");
@@ -81,6 +90,9 @@ let namaz = (e) => {
         date_1.classList.toggle("gr_date");
         date_2.classList.toggle("gr_date");
         date_3.classList.toggle("gr_date");
+
+
+
 
         fetch(url)
             .then((response) => response.json())
@@ -130,6 +142,8 @@ let namaz = (e) => {
                 hijri_1.classList.toggle("gr_date");
                 hijri_2.classList.toggle("gr_date");
                 hijri_3.classList.toggle("gr_date");
+
+
             })
             .catch((err) => console.error(err));
     }
@@ -151,17 +165,15 @@ let namaz = (e) => {
         weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
         weather_temp.append(JSON.parse(localStorage.getItem("temp")))
         weather_condition.append(JSON.parse(localStorage.getItem("condition")))
-        console.log(localStorage.getItem("weather_city"));
         
         let weather_url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${cityValue}`
     
-        weather_city.innerHTML = ''
+        weather_city.innerHTML = ""
         local_time.innerHTML = "";
         weather_temp.innerHTML = "";
         weather_condition.innerHTML = "";
 
     fetch(weather_url,  options)
-
         .then((response) => response.json())
         .then((current) => {
  
@@ -169,6 +181,8 @@ let namaz = (e) => {
             local_time.append(current.location.localtime);
             weather_temp.append(current.current.temp_c + String.fromCodePoint(8451));
             weather_condition.append(current.current.condition.text);
+             
+
 
             localStorage.setItem("weather_city", JSON.stringify(current.location.name))
             localStorage.setItem("local_time", JSON.stringify(current.location.localtime))
