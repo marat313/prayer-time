@@ -31,15 +31,15 @@
 /* ================ FORM ================== */
 
     .form > input {
-        /* border: none; */
+        border: none;
         font-size: 18px;
         min-width: 320px;
         height: 45px;
         border-radius: 20px;
         color: #000000;
-        background: #3a5278;
-        box-shadow: inset 5px 5px 10px #293954,
-            inset -5px -5px 10px #4b6b9c;
+        background: linear-gradient(145deg, #334c72, #3d5a88);
+        box-shadow:  5px 5px 10px #22324c,
+                     -5px -5px 10px #5076b2;
     }
     .form >input:focus{
         outline: none;
