@@ -23,7 +23,9 @@ const weather_temp = document.querySelector(".weather_temp");
 const weather_condition = document.querySelector(".weather_condition");
 const local_time = document.querySelector(".local_time");
 const weather = document.querySelector(".weather");
+
 const moon = document.querySelector(".moon");
+const sun = document.querySelector(".sun");
 
 
 let namaz = (e) => {
@@ -34,7 +36,25 @@ let namaz = (e) => {
 
 
 
+    const loc = JSON.parse(localStorage.getItem("local_time"))[11] + JSON.parse(localStorage.getItem("local_time"))[11]
+    const kunBatish = JSON.parse(localStorage.getItem("zakat"))[0] + JSON.parse(localStorage.getItem("zakat"))[1]
+    const kunChigish = JSON.parse(localStorage.getItem("voshod"))[0] + JSON.parse(localStorage.getItem("voshod"))[1]
+    console.log(kunBatish);
+    console.log(kunChigish);
+    console.log(loc);
 
+
+    if(kunBatish <= loc) {
+        moon.classList.add("sky_moon")
+        sun.classList.remove("sky_sun")
+        console.log("noch");
+    }
+    if(loc <= kunChigish) {
+        moon.classList.remove("sky_moon")
+        sun.classList.add("sky_sun")
+        console.log("den");
+
+    }
 
     //! LOCAL STORAGE OF PRAY TIMES
     fajr_time.append( JSON.parse(localStorage.getItem("fajr")))
@@ -142,6 +162,8 @@ let namaz = (e) => {
                 hijri_1.classList.toggle("gr_date");
                 hijri_2.classList.toggle("gr_date");
                 hijri_3.classList.toggle("gr_date");
+
+
 
 
             })

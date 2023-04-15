@@ -161,8 +161,6 @@
         justify-content: center;
         margin-top: 25px;
         align-items: center;
-        /* background-color: #0a1b2d; */
-        /* background-color: #33b1d4; */
         border-radius: 20px;
         height: 120px;
         position: relative;
@@ -334,7 +332,7 @@
     }
 
 /* ================ MOON ANIMATION ================== */
-      .moon {
+      .sky_moon {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -355,7 +353,7 @@
 /* ================ SUN ANIMATION ======================= */
 
 
-.sun {
+.sky_sun {
     background: white;
     border-radius: 50%;
     width: 10vmin;
