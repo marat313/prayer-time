@@ -36,25 +36,14 @@ let namaz = (e) => {
 
 
 
-    const loc = JSON.parse(localStorage.getItem("local_time"))[11] + JSON.parse(localStorage.getItem("local_time"))[11]
-    const kunBatish = JSON.parse(localStorage.getItem("zakat"))[0] + JSON.parse(localStorage.getItem("zakat"))[1]
-    const kunChigish = JSON.parse(localStorage.getItem("voshod"))[0] + JSON.parse(localStorage.getItem("voshod"))[1]
-    console.log(kunBatish);
-    console.log(kunChigish);
-    console.log(loc);
+    // const loc = JSON.parse(localStorage.getItem("local_time"))[11] + JSON.parse(localStorage.getItem("local_time"))[11]
+    // const kunBatish = JSON.parse(localStorage.getItem("zakat"))[0] + JSON.parse(localStorage.getItem("zakat"))[1]
+    // const kunChigish = JSON.parse(localStorage.getItem("voshod"))[0] + JSON.parse(localStorage.getItem("voshod"))[1]
+    // console.log(kunBatish);
+    // console.log(kunChigish);
 
 
-    if(kunBatish <= loc) {
-        moon.classList.add("sky_moon")
-        sun.classList.remove("sky_sun")
-        console.log("noch");
-    }
-    if(loc <= kunChigish) {
-        moon.classList.remove("sky_moon")
-        sun.classList.add("sky_sun")
-        console.log("den");
 
-    }
 
     //! LOCAL STORAGE OF PRAY TIMES
     fajr_time.append( JSON.parse(localStorage.getItem("fajr")))
@@ -166,6 +155,7 @@ let namaz = (e) => {
 
 
 
+
             })
             .catch((err) => console.error(err));
     }
@@ -203,6 +193,7 @@ let namaz = (e) => {
             local_time.append(current.location.localtime);
             weather_temp.append(current.current.temp_c + String.fromCodePoint(8451));
             weather_condition.append(current.current.condition.text);
+
              
 
 
