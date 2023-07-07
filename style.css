@@ -142,8 +142,9 @@
 
     .date .date_hijri>span {
         width: 120px;
-        height: 45px;
+        height: 55px;
         border: none;
+        align-items: center;
         border-radius: 15px;
         margin: 12px 10px 0px 10px;
         font-family: 'Secular One', sans-serif;
@@ -394,13 +395,10 @@
         margin-top: 1rem;
         margin-bottom: 20px;
         padding: 0 1rem 0 1rem;
-        color: #121312;
+        color: #ffffff;
      }
      #namaz_time > h4{
         border: none;
-        /* background-color: #089fa1; */
-        /* background-color: #152953; */
-        /* color: #4ea04f; */
         border-radius: 40px;
         padding: 10px 10px 10px 10px;
         font-size: 16px;
@@ -412,7 +410,7 @@
                     inset -5px -5px 10px #4b6b9c;
      }
      #namaz_time > h4 > span{
-        color: #03b7b7;
+        color: #000000;
      }
      #namaz_time > h4:hover{
         transform: scale(1.1);

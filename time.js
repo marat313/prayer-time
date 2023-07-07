@@ -34,16 +34,10 @@ let namaz = (e) => {
     let cityValue = document.getElementById("city").value;
     let date = new Date(2022, 4, 25, 13, 30);
 
-
-
-    // const loc = JSON.parse(localStorage.getItem("local_time"))[11] + JSON.parse(localStorage.getItem("local_time"))[11]
-    // const kunBatish = JSON.parse(localStorage.getItem("zakat"))[0] + JSON.parse(localStorage.getItem("zakat"))[1]
-    // const kunChigish = JSON.parse(localStorage.getItem("voshod"))[0] + JSON.parse(localStorage.getItem("voshod"))[1]
-    // console.log(kunBatish);
-    // console.log(kunChigish);
-
-
-
+    weather_city.append(JSON.parse(localStorage.getItem("weather_city")))
+    weather_temp.append(JSON.parse(localStorage.getItem("temp")))
+    weather_condition.append(JSON.parse(localStorage.getItem("condition")))
+    local_time.append(JSON.parse(localStorage.getItem("local_time")))
 
     //! LOCAL STORAGE OF PRAY TIMES
     fajr_time.append( JSON.parse(localStorage.getItem("fajr")))
